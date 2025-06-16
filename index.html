@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Group 5 GreenFarm Blockchain Traceability</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>GreenFarm Organics Product Tracker</h1>
+    <p class="subheading">Blockchain-powered traceability from farm to shelf</p>
+
+    <div id="auth">
+      <h2>Access Control</h2>
+      <input type="text" id="regUser" placeholder="New Username">
+      <input type="password" id="regPass" placeholder="New Password">
+      <button onclick="registerUser()">Register</button>
+      <hr>
+      <input type="text" id="loginUser" placeholder="Username">
+      <input type="password" id="loginPass" placeholder="Password">
+      <button onclick="loginUser()">Login</button>
+    </div>
+
+    <div id="app" class="hidden">
+      <button id="logoutBtn" onclick="logout()">Logout</button>
+      
+      <h2>Register Product</h2>
+      <input type="text" id="productName" placeholder="Product Name">
+      <input type="text" id="productDesc" placeholder="Description">
+      <input type="text" id="nodeLocation" placeholder="Node Location (e.g., Farm)">
+      <button onclick="registerProduct()">Add Product</button>
+
+      <h2>Transfer Product</h2>
+      <select id="productList"></select>
+      <input type="text" id="newOwner" placeholder="New Owner (Warehouse, Retail)">
+      <button onclick="transferProduct()">Transfer</button>
+
+      <h2>Blockchain Ledger</h2>
+      <div id="ledger"></div>
+
+      <h2>QR Code & Export</h2>
+      <div id="qrContainer"></div>
+      <button onclick="exportCSV()">Export Blockchain to CSV</button>
+
+      <h2>Analytics</h2>
+      <div id="analytics"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
