@@ -1,54 +1,91 @@
+<!-- Declares the document type as HTML5 -->
 <!DOCTYPE html>
+<!-- Sets the language of the document to English -->
 <html lang="en">
 <head>
+  <!-- Sets the character encoding for the document -->
   <meta charset="UTF-8">
+  <!-- Sets the title that appears in the browser tab -->
   <title>Group 5 GreenFarm Blockchain Traceability</title>
+  <!-- Configures the viewport for responsive design -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <!-- Links the stylesheet for styling -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Includes the QR code generation library -->
   <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
 </head>
 <body>
+  <!-- Main container for the application content -->
   <div class="container">
+    <!-- Main heading for the application -->
     <h1>GreenFarm Organics Product Tracker</h1>
+    <!-- Subheading providing a brief description -->
     <p class="subheading">Blockchain-powered traceability from farm to shelf</p>
 
+    <!-- Authentication section, initially visible -->
     <div id="auth">
       <h2>Access Control</h2>
+      <!-- Input for new username registration -->
       <input type="text" id="regUser" placeholder="New Username">
+      <!-- Input for new password registration -->
       <input type="password" id="regPass" placeholder="New Password">
+      <!-- Button to trigger user registration -->
       <button onclick="registerUser()">Register</button>
+      <!-- Horizontal rule to separate sections -->
       <hr>
+      <!-- Input for existing username login -->
       <input type="text" id="loginUser" placeholder="Username">
+      <!-- Input for existing password login -->
       <input type="password" id="loginPass" placeholder="Password">
+      <!-- Button to trigger user login -->
       <button onclick="loginUser()">Login</button>
     </div>
 
+    <!-- Application section, initially hidden until login -->
     <div id="app" class="hidden">
+      <!-- Button to log out the current user -->
       <button id="logoutBtn" onclick="logout()">Logout</button>
       
+      <!-- Section for registering new products -->
       <h2>Register Product</h2>
+      <!-- Input for the product name -->
       <input type="text" id="productName" placeholder="Product Name">
+      <!-- Input for the product description -->
       <input type="text" id="productDesc" placeholder="Description">
+      <!-- Input for the current location or node -->
       <input type="text" id="nodeLocation" placeholder="Node Location (e.g., Farm)">
+      <!-- Button to add the product to the blockchain -->
       <button onclick="registerProduct()">Add Product</button>
 
+      <!-- Section for transferring product ownership -->
       <h2>Transfer Product</h2>
+      <!-- Dropdown list to select a product -->
       <select id="productList"></select>
+      <!-- Input for the new owner's name -->
       <input type="text" id="newOwner" placeholder="New Owner (Warehouse, Retail)">
+      <!-- Button to initiate the product transfer -->
       <button onclick="transferProduct()">Transfer</button>
 
+      <!-- Section to display the blockchain ledger -->
       <h2>Blockchain Ledger</h2>
+      <!-- Div where the ledger will be rendered -->
       <div id="ledger"></div>
 
+      <!-- Section for generating QR codes and exporting data -->
       <h2>QR Code & Export</h2>
+      <!-- Div where the QR code will be displayed -->
       <div id="qrContainer"></div>
+      <!-- Button to export the blockchain data to a CSV file -->
       <button onclick="exportCSV()">Export Blockchain to CSV</button>
 
+      <!-- Section for analytics (content to be added or displayed here) -->
       <h2>Analytics</h2>
+      <!-- Div where analytics data will be displayed -->
       <div id="analytics"></div>
     </div>
   </div>
 
+  <!-- Links the main JavaScript file -->
   <script src="script.js"></script>
 </body>
 </html>
