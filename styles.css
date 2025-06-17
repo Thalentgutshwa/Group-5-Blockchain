@@ -1,127 +1,173 @@
+/* General body styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f3f6fa;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    max-width: 900px;
-    margin: auto;
-    padding: 30px;
-    background-color: #fff;
-    margin-top: 40px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  
-  h1, h2 {
-    text-align: center;
-    color: #2a4d69;
-  }
-  
-  .subheading {
-    text-align: center;
-    font-style: italic;
-    color: #3b3b3b;
-    margin-bottom: 20px;
-  }
-  
-  input, button, select {
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-  }
-  
-  button {
-    background-color: #1e90ff;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0d70c9;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  #logoutBtn {
-    background-color: #e74c3c;
-  }
-  
-  .block {
-    background-color: #eef2f7;
-    margin-bottom: 10px;
-    border-left: 5px solid #1e90ff;
-    padding: 10px;
-    border-radius: 5px;
-  }
+  font-family: Arial, sans-serif;
+  background-color: #f3f6fa;
+ margin: 0;
+ padding: 0;
+}
 
-  .chat-area {
-    height: 300px; /* Adjust height as needed */
-    overflow-y: auto;
-    border: 1px solid #ccc;
-    padding: 10px;
-  }
-  
-  pre {
-    font-size: 12px;
-    white-space: pre-wrap;
-  }
-  
-  /* Adjust container padding for mobile */
+/* Container for main content */
 .container {
-  margin: 20px auto;
-  padding: 20px;
+  max-width: 900px;
+ margin: auto;
+ padding: 30px;
+ background-color: #fff;
+  margin-top: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Styles for main and secondary headings */
+h1, h2 {
+  text-align: center;
+ color: #52a02d;
+}
+
+/* Styles for subheadings */
+.subheading {
+  text-align: center;
+  font-style: italic;
+ color: #3b3b3b;
+ margin-bottom: 20px;
+}
+
+/* Styles for input fields, buttons, and select dropdowns */
+input, button, select {
+ width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Styles for buttons */
+button {
+ background-color: #52a02d;
+  color: white;
+  font-weight: bold;
+ cursor: pointer;
+  /* Make buttons fit the maximum length */
+  display: block; /* Ensure the button is a block element to take full width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Hover effect for buttons */
+button:hover {
+ background-color: #0d70c9;
+}
+
+/* Class to hide elements */
+.hidden {
+ display: none;
+}
+
+/* Specific style for the logout button */
+#logoutBtn {
+ background-color: #e74c3c;
+}
+
+/* Styles for block elements, possibly representing data or messages */
+.block {
+  background-color: #eef2f7;
+ margin-bottom: 10px;
+ border-left: 5px solid #1e90ff;
+ padding: 10px;
+ border-radius: 5px;
+}
+/* Styles for the logo */
+/* Styles for the chat area */
+.chat-area {
+  height: 300px; /* Adjust height as needed */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* Styles for preformatted text */
+pre {
+  font-size: 12px;
+ white-space: pre-wrap;
+}
+/* =============================================== */
+/*              Responsive Design                */
+/* =============================================== */
+
+/* Adjust container padding for smaller screens (mobile) */
+.container {
+margin: 20px auto;
+padding: 20px;
+ background-color: #e8f5e9; /* Light green background for container */
+ color: #1b5e20; /* Dark green text color */
+}
+
+/* Keyframes for a pulsing animation (not applied to any element in this CSS) */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
 
 /* Landscape phones & tablets */
-@media (min-width: 600px) {
-  .container {
-    max-width: 700px;
-    padding: 25px;
-  }
+@media (min-width: 600px) { /* Styles for screen widths 600px and above */
+.container {
+  max-width: 700px;
+  padding: 25px;
+ background-color: #c8e6c9; /* Slightly darker green for medium screens */
+}
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-  .featured-product {
-    flex-direction: row;
-  }
+@media (min-width: 768px) { /* Styles for screen widths 768px and above */
+.container {
+  max-width: 720px;
+ background-color: #a5d6a7; /* Another shade of green for tablets */
+}
+.featured-product {
+  flex-direction: row;
+}
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { /* Styles for screen widths 992px and above */
+.container {
+  max-width: 960px;
+ background-color: #81c784; /* Green shade for large desktops */
+}
+.featured-product {
+  flex-direction: row;
+}
+.featured-product img {
+  width: 100%;
+  max-width: 200px;
+}
 }
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-  .featured-product {
-    flex-direction: row;
-  }
-  .featured-product img {
-    width: 100%;
-    max-width: 200px;
-  }
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { /* Styles for screen widths 1200px and up */
+.container {
+  max-width: 1140px;
+ background-color: #66bb6a; /* Darker green for extra large desktops */
+}
+.featured-product {
+  flex-direction: row;
+}
+}
+
+/* Styles for the logo image within the logo div */
+.logo img {
+  /* Make the logo image small like other logos on normal websites */
+  max-width: 50px; /* Set a maximum width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure the image is a block element for centering */
+  width: 100%;
+  max-width: 200px;
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-  .featured-product {
-    flex-direction: row;
-  }
+.container {
+  max-width: 1140px;
 }
-
-/* Add styles here */
-
-
+.featured-product {
+  flex-direction: row;
+}
+}
