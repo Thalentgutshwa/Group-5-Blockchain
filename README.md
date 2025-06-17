@@ -68,9 +68,9 @@ Blockchain Ledger ← Append ← Append ← Append per Event
 
 GreenFarm
 
-├── index.html # Main UI layout and structure
-├── style.css # Styling for layout, cards, QR, buttons
-├── script.js # Logic for blockchain, QR, analytics, CSV
+├── index.html Main UI layout and structure
+├── style.css Styling for layout, cards, QR, buttons
+├── script.js Logic for blockchain, QR, analytics, CSV
 ├── architecture Diagram (visual for reports)
 ├── README.md Project documentation
 
