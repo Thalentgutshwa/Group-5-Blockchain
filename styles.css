@@ -1,7 +1,7 @@
 /* General body styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f3f6fa;
+  background-color: white;
  margin: 0;
  padding: 0;
 }
@@ -112,7 +112,7 @@ padding: 20px;
 .container {
   max-width: 700px;
   padding: 25px;
- background-color: #c8e6c9; /* Slightly darker green for medium screens */
+ background-color: #eaf0ea; /* Slightly darker green for medium screens */
 }
 }
 
@@ -120,7 +120,7 @@ padding: 20px;
 @media (min-width: 768px) { /* Styles for screen widths 768px and above */
 .container {
   max-width: 720px;
- background-color: #a5d6a7; /* Another shade of green for tablets */
+ background-color: #eaf0ea; /* Another shade of green for tablets */
 }
 .featured-product {
   flex-direction: row;
@@ -130,7 +130,7 @@ padding: 20px;
 @media (min-width: 992px) { /* Styles for screen widths 992px and above */
 .container {
   max-width: 960px;
- background-color: #81c784; /* Green shade for large desktops */
+ background-color: #eaf0ea; /* Green shade for large desktops */
 }
 .featured-product {
   flex-direction: row;
@@ -145,7 +145,7 @@ padding: 20px;
 @media (min-width: 1200px) { /* Styles for screen widths 1200px and up */
 .container {
   max-width: 1140px;
- background-color: #66bb6a; /* Darker green for extra large desktops */
+ background-color: #eaf0ea; /* Darker green for extra large desktops */
 }
 .featured-product {
   flex-direction: row;
