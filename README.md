@@ -99,8 +99,7 @@ Each registered user is assigned to a role (Farmer, Distributor, Retailer). The 
 
 - Developed by: Group 5
 - For academic evaluation under Blockchain Traceability Project 
-- Contact: `talent@example.com` (replace with your actual email)
-- GitHub: [github.com/your-org](https://github.com/your-org)
+- Contact: Group 5
 
 ## License
 
